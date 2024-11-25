@@ -22,8 +22,8 @@ export const handler: ExecuteHandler = async (ctxt: IExecuteFunctions) => {
 
 	for (let i = 0; i < items.length; i++) {
 		try {
-			const allowance = await dougsApi.deleteOperation(getCompanyIdProperty(ctxt, i), getOperationProperty(ctxt, i));
-			returnData.push(allowance);
+			await dougsApi.deleteOperation(getCompanyIdProperty(ctxt, i), getOperationProperty(ctxt, i));
+			returnData.push({ success: true });
 		} catch (e) {
 			returnData.push(e);
 		}
