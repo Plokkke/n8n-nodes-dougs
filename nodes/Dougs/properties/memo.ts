@@ -13,7 +13,7 @@ export const property: INodeProperties & Displayable = {
 			operation: [] as string[],
 		},
 	},
-}
+};
 
 export function getProperty(ctxt: ILoadOptionsFunctions): string;
 export function getProperty(ctxt: IExecuteFunctions, idx: number): string;

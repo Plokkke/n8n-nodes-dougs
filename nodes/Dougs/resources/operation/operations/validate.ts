@@ -22,7 +22,10 @@ export const handler: ExecuteHandler = async (ctxt: IExecuteFunctions) => {
 
 	for (let i = 0; i < items.length; i++) {
 		try {
-			const operation = await dougsApi.validateOperation(getCompanyIdProperty(ctxt, i), getOperationProperty(ctxt, i));
+			const operation = await dougsApi.validateOperation(
+				getCompanyIdProperty(ctxt, i),
+				getOperationProperty(ctxt, i),
+			);
 			returnData.push(operation);
 		} catch (e) {
 			returnData.push(e);

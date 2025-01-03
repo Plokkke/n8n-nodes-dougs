@@ -1,4 +1,9 @@
-import { ILoadOptionsFunctions, INodeListSearchResult, INodeProperties, NodeOperationError } from 'n8n-workflow';
+import {
+	ILoadOptionsFunctions,
+	INodeListSearchResult,
+	INodeProperties,
+	NodeOperationError,
+} from 'n8n-workflow';
 import { Category, DougsApiByLogin, DougsCredentials } from '@plokkke/dougs-compta';
 import { Displayable, getValue } from '../../utils';
 import { IExecuteFunctions } from 'n8n-workflow/dist/Interfaces';
@@ -34,11 +39,10 @@ export const property: INodeProperties & Displayable = {
 	],
 };
 
-
 export const methods = {
 	listSearch: {
 		getCategories,
-	}
+	},
 };
 
 export function getProperty(ctxt: ILoadOptionsFunctions): number;
@@ -68,7 +72,7 @@ async function getCategories(
 	return {
 		results: categories.map((category: Category) => ({
 			name: category.wording,
-			value: `${ category.id }`,
+			value: `${category.id}`,
 			description: category.description,
 		})),
 	};

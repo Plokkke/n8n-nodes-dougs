@@ -14,11 +14,14 @@ export const property: INodeProperties & Displayable = {
 			operation: [] as string[],
 		},
 	},
-}
+};
 
 export function getProperty(ctxt: ILoadOptionsFunctions): DateTime<true>;
 export function getProperty(ctxt: IExecuteFunctions, idx: number): DateTime<true>;
-export function getProperty(ctxt: IExecuteFunctions | ILoadOptionsFunctions, idx?: number): DateTime<true> {
+export function getProperty(
+	ctxt: IExecuteFunctions | ILoadOptionsFunctions,
+	idx?: number,
+): DateTime<true> {
 	const date = DateTime.fromISO(getValue(ctxt as IExecuteFunctions, property.name, idx!));
 	if (!date.isValid) {
 		throw new Error('Invalid date');

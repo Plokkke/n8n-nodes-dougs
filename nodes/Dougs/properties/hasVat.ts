@@ -13,10 +13,13 @@ export const property: INodeProperties & Displayable = {
 			operation: [] as string[],
 		},
 	},
-}
+};
 
 export function getProperty(ctxt: ILoadOptionsFunctions): boolean;
 export function getProperty(ctxt: IExecuteFunctions, idx: number): boolean;
-export function getProperty(ctxt: IExecuteFunctions | ILoadOptionsFunctions, idx?: number): boolean {
+export function getProperty(
+	ctxt: IExecuteFunctions | ILoadOptionsFunctions,
+	idx?: number,
+): boolean {
 	return getValue<boolean>(ctxt as IExecuteFunctions, property.name, idx!);
 }

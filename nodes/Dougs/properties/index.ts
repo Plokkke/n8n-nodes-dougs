@@ -27,7 +27,7 @@ export const propertyByName = {
 export const properties = Object.values(propertyByName);
 
 export const methods = _.merge(
-	{ },
+	{},
 	carIdMethods,
 	categoryIdMethods,
 	companyIdMethods,

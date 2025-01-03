@@ -5,7 +5,7 @@ import {
 	NodeExecutionWithMetadata,
 	NodeOperationError,
 } from 'n8n-workflow';
-import { IExecuteFunctions } from 'n8n-workflow/dist/Interfaces';
+import { IExecuteFunctions, NodeConnectionType } from 'n8n-workflow/dist/Interfaces';
 
 import {
 	handlerByOperationByResource,
@@ -26,8 +26,8 @@ export class Dougs implements INodeType {
 		defaults: {
 			name: 'Dougs',
 		},
-		inputs: ['main'],
-		outputs: ['main'],
+		inputs: [{ type: NodeConnectionType.Main }],
+		outputs: [{ type: NodeConnectionType.Main }],
 		credentials: [
 			{
 				name: 'dougsLoginApi',
@@ -41,11 +41,7 @@ export class Dougs implements INodeType {
 				'Content-Type': 'application/json',
 			},
 		},
-		properties: [
-			ressourcesProperty,
-			...operationsProperties,
-			...properties,
-		],
+		properties: [ressourcesProperty, ...operationsProperties, ...properties],
 	};
 
 	methods = methods;

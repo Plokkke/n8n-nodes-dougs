@@ -56,7 +56,7 @@ async function getPartners(this: ILoadOptionsFunctions): Promise<INodeListSearch
 
 	return {
 		results: partners.map((partner: Partner) => ({
-			name: `${ partner.naturalPerson.fullName } - ${ partner.position }`,
+			name: `${partner.naturalPerson.fullName} - ${partner.position}`,
 			value: `${partner.id}`,
 		})),
 	};
