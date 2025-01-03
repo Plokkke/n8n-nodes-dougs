@@ -1,6 +1,6 @@
 {
   "name": "@plokkke/n8n-nodes-dougs",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Nodes for n8n to interact with Dougs API",
   "keywords": [
     "n8n-community-node-package",
@@ -58,7 +58,7 @@
     "n8n-workflow": "*"
   },
   "dependencies": {
-    "@plokkke/dougs-compta": "^0.3.9",
+    "@plokkke/dougs-compta": "^0.3.10",
     "axios": "^1.7.9",
     "lodash": "^4.17.21",
     "luxon": "^3.5.0",
