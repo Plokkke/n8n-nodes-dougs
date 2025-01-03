@@ -5,7 +5,7 @@ import { IExecuteFunctions, INodePropertyOptions } from 'n8n-workflow/dist/Inter
 import { DougsApiByLogin, DougsCredentials } from '@plokkke/dougs-compta';
 
 import { getProperty as getCompanyIdProperty } from '../../../properties/companyId';
-import { getProperty as getOperationProperty } from '../../../properties/operationId';
+import { getProperty as getOperationIdProperty } from '../../../properties/operationId';
 
 export const operation: INodePropertyOptions & { value: string } = {
 	name: 'Validate',
@@ -24,7 +24,7 @@ export const handler: ExecuteHandler = async (ctxt: IExecuteFunctions) => {
 		try {
 			const operation = await dougsApi.validateOperation(
 				getCompanyIdProperty(ctxt, i),
-				getOperationProperty(ctxt, i),
+				getOperationIdProperty(ctxt, i),
 			);
 			returnData.push(operation);
 		} catch (e) {

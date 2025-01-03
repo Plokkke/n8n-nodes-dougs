@@ -3,8 +3,8 @@ import { Displayable, getValue } from '../../utils';
 import { IExecuteFunctions } from 'n8n-workflow/dist/Interfaces';
 
 export const property: INodeProperties & Displayable = {
-	displayName: 'Category ID',
-	name: 'categoryId',
+	displayName: 'Operation ID',
+	name: 'operationId',
 	type: 'string',
 	default: '',
 	displayOptions: {
