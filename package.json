@@ -1,6 +1,6 @@
 {
   "name": "@plokkke/n8n-nodes-dougs",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Nodes for n8n to interact with Dougs API",
   "keywords": [
     "n8n-community-node-package",

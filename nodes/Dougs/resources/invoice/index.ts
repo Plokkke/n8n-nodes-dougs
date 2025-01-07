@@ -10,8 +10,8 @@ export const resource: INodePropertyOptions & { value: string } = {
 };
 
 export const operationsProperty: INodeProperties = {
-	displayName: 'Invoice',
-	name: 'invoice',
+	displayName: 'Operation',
+	name: 'operation',
 	type: 'options',
 	default: '',
 	noDataExpression: true,
