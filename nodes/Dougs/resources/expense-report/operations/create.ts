@@ -33,7 +33,7 @@ export const handler: ExecuteHandler = async (ctxt: IExecuteFunctions) => {
 				amount: getAmountProperty(ctxt, i),
 				categoryId: getCategoryIdProperty(ctxt, i),
 				partnerId: getPartnerIdProperty(ctxt, i),
-				hasVat: getHasVatProperty(ctxt, i),
+				vatExemption: getHasVatProperty(ctxt, i),
 			});
 			returnData.push(expense);
 		} catch (e) {

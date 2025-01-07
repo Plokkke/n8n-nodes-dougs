@@ -10,6 +10,9 @@ import { methods as partnerIdMethods, property as partnerId } from './partnerId'
 import { property as distance } from './distance';
 import { property as carId, methods as carIdMethods } from './carId';
 import { property as operationId } from './operationId';
+import { property as fileName } from './fileName';
+import { property as binaryFieldName } from './binaryFieldName';
+import { property as invoiceType } from './invoiceType';
 
 export const propertyByName = {
 	companyId,
@@ -17,11 +20,14 @@ export const propertyByName = {
 	memo,
 	amount,
 	categoryId,
+	fileName,
 	partnerId,
 	hasVat,
 	distance,
 	carId,
 	operationId,
+	binaryFieldName,
+	invoiceType
 };
 
 export const properties = Object.values(propertyByName);

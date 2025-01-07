@@ -19,6 +19,8 @@ export class Dougs implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Dougs',
 		name: 'dougs',
+		// eslint-disable-next-line n8n-nodes-base/node-class-description-icon-not-svg
+		icon: 'file:logo.png',
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{ $parameter["operation"] + ": " + $parameter["resource"] }}',

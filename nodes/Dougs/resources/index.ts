@@ -16,6 +16,12 @@ import {
 	resource as operationResource,
 	setups as operationSetups,
 } from './operation';
+import {
+	handlerByOperation as invoiceHandlerByOperation,
+	operationsProperty as invoiceOperationsProperty,
+	resource as invoiceResource,
+	setups as invoiceSetups,
+} from './invoice';
 import { ExecuteHandler } from '../../utils';
 import { INodeProperties } from 'n8n-workflow';
 
@@ -25,19 +31,21 @@ export const property: INodeProperties = {
 	type: 'options',
 	default: '',
 	noDataExpression: true,
-	options: [expenseResource, mileageAllowanceResource, operationResource],
+	options: [expenseResource, mileageAllowanceResource, operationResource, invoiceResource],
 };
 
 export const operationsProperties: INodeProperties[] = [
 	expenseOperationsProperty,
 	mileageAllowanceOperationsProperty,
 	operationOperationsProperty,
+	invoiceOperationsProperty,
 ];
 
 export const handlerByOperationByResource: Record<string, Record<string, ExecuteHandler>> = {
 	[expenseResource.value]: expenseHandlerByOperation,
 	[mileageAllowanceResource.value]: mileageAllowanceHandlerByOperation,
 	[operationResource.value]: operationHandlerByOperation,
+	[invoiceResource.value]: invoiceHandlerByOperation,
 };
 
-export const setups = [...expenseSetups, ...mileageAllowanceSetups, ...operationSetups];
+export const setups = [...expenseSetups, ...mileageAllowanceSetups, ...operationSetups, ...invoiceSetups];
